@@ -35,6 +35,13 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
 .qr-placeholder i:nth-child(2) { top:6px; right:6px; }
 .qr-placeholder i:nth-child(3) { bottom:6px; left:6px; }
 .qr-placeholder b { margin:13px 0 0 15px; font-size:.68rem; }
+.weekend-plan { background:#fffaf0; }
+.weekend-plan>small { margin-bottom:13px; }
+.plan-day { display:grid; grid-template-columns:34px 1fr; gap:10px; align-items:start; padding:8px 0; }
+.plan-day+.plan-day { border-top:1px dashed rgba(32,34,32,.3); }
+.plan-day>b { display:grid; width:30px; height:30px; place-items:center; border:2px solid var(--ink); border-radius:50%; background:var(--yellow); font-size:.68rem; box-shadow:2px 2px 0 var(--ink); }
+.plan-day p { margin:3px 0 0; color:#414642; font-size:.78rem; font-weight:600; line-height:1.42; }
+.bring-note { margin:13px 0 0; padding:11px 12px; border:2px solid var(--ink); background:#dce9cf; font-size:.76rem; font-weight:700; line-height:1.45; transform:rotate(-.5deg); }
 .coming { grid-column:1; justify-self:start; align-self:end; margin:0; padding:8px 12px; border:2px solid var(--ink); background:var(--paper); color:var(--ink); font-size:.8rem; font-weight:700; letter-spacing:.04em; box-shadow:3px 3px 0 var(--ink); transform:rotate(-1deg); }
 #uvod,#informace,#mapa { scroll-margin-top:105px; }
 @media (max-width:760px) {
