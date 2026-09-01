@@ -13,6 +13,7 @@ body { margin:0; min-height:100%; color:var(--ink); background:#e9e7e0; font-fam
 .nav-links a { position:relative; padding:8px 2px; color:var(--ink); font-size:.78rem; font-weight:800; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; }
 .nav-links a::after { content:""; position:absolute; left:0; right:100%; bottom:3px; height:4px; background:var(--yellow); transition:right .2s ease; }
 .nav-links a:hover::after,.nav-links a:focus-visible::after { right:0; }
+.menu-toggle,.mobile-place { display:none; }
 .place-link { color:var(--ink); font-size:.82rem; font-weight:800; letter-spacing:.09em; text-decoration:none; text-transform:uppercase; border:2px solid var(--ink); background:var(--paper); padding:9px 13px; box-shadow:4px 4px 0 var(--ink); transform:rotate(1deg); }
 .place-link span { color:var(--red); }
 .intro { align-self:center; max-width:720px; padding:7vh 0 2vh; }
@@ -49,10 +50,18 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
   .topbar { top:10px; left:10px; right:10px; gap:8px; padding:7px 8px; box-shadow:4px 4px 0 var(--ink); }
   .mark strong { display:none; }
   .mark span { width:34px; height:34px; }
-  .nav-links { gap:12px; margin:0 auto; }
-  .nav-links a { font-size:.67rem; letter-spacing:.03em; }
-  .place-link { padding:7px 8px; font-size:0; box-shadow:2px 2px 0 var(--ink); }
-  .place-link span { font-size:1rem; }
+  .menu-toggle { position:relative; z-index:2; display:grid; width:43px; height:39px; margin-left:auto; padding:8px; place-content:center; gap:5px; color:var(--ink); background:var(--yellow); border:2px solid var(--ink); box-shadow:3px 3px 0 var(--ink); cursor:pointer; }
+  .menu-toggle span { display:block; width:21px; height:3px; background:currentColor; transition:transform .35s var(--ease-comic),opacity .2s ease; }
+  .menu-open .menu-toggle span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+  .menu-open .menu-toggle span:nth-child(2) { opacity:0; }
+  .menu-open .menu-toggle span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+  .nav-links { position:absolute; top:calc(100% + 10px); left:0; right:0; display:grid; gap:0; margin:0; padding:9px 14px 13px; background:rgba(255,253,246,.97); border:3px solid var(--ink); box-shadow:5px 5px 0 var(--ink); opacity:0; visibility:hidden; transform:translateY(-10px); transition:opacity .25s ease,transform .35s var(--ease-comic),visibility .35s; }
+  .menu-open .nav-links { opacity:1; visibility:visible; transform:translateY(0); }
+  .nav-links a { padding:12px 4px; font-size:.76rem; letter-spacing:.06em; border-bottom:1px dashed rgba(32,34,32,.28); }
+  .nav-links a:last-child { border-bottom:0; }
+  .nav-links a::after { bottom:8px; }
+  .mobile-place { display:block; color:var(--red) !important; }
+  .place-link { display:none; }
   .shade { background:linear-gradient(0deg,rgba(250,249,244,.76) 0%,rgba(250,249,244,.48) 62%,rgba(250,249,244,.1) 100%),radial-gradient(ellipse at 82% 18%,rgba(244,190,202,.32) 0 14%,transparent 34%),radial-gradient(ellipse at 18% 69%,rgba(160,198,231,.3) 0 16%,transparent 36%),radial-gradient(ellipse at 76% 83%,rgba(162,211,202,.28) 0 14%,transparent 34%); }
   .intro { flex:1; align-content:end; padding:13vh 0 10px; }
   h1 { font-size:clamp(4rem,22vw,6.5rem); }
@@ -103,7 +112,11 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
 .map-kicker { display:inline-block; margin:0 0 15px; padding:7px 11px; border:2px solid var(--ink); background:var(--yellow); box-shadow:3px 3px 0 var(--ink); font-size:.72rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; transform:rotate(-1deg); }
 
 /* Menu zůstává pevné; nad něj smějí při posouvání vystoupit jen žluté štítky. */
-.eyebrow,.map-kicker,.detail-card>b { position:relative; z-index:60; }
+.hero { isolation:auto; }
+.hero::before,.shade { z-index:0; }
+.intro,.info,.coming { position:relative; }
+.eyebrow,.map-kicker { position:relative; z-index:60; }
+.detail-card>b { z-index:60; }
 .map-copy h2 { margin:0 0 20px; font-size:clamp(2.5rem,5vw,5rem); line-height:.92; letter-spacing:-.055em; text-transform:uppercase; }
 .map-copy>p:not(.map-kicker) { margin:0 0 28px; font-size:1.02rem; font-weight:500; line-height:1.65; }
 .map-button { display:inline-block; padding:13px 17px; color:var(--ink); background:#fff; border:3px solid var(--ink); box-shadow:5px 5px 0 var(--ink); font-weight:800; text-decoration:none; text-transform:uppercase; transform:rotate(.5deg); }
