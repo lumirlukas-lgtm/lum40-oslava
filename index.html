@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=kresba-7" />
+  <link rel="stylesheet" href="style.css?v=mapa-8" />
 </head>
 <body>
   <main class="hero">
@@ -35,5 +35,42 @@
     </section>
     <p class="coming">Podrobnosti postupně přibudou tady.</p>
   </main>
+  <section class="map-section" aria-labelledby="map-title">
+    <div class="map-copy">
+      <p class="map-kicker">Ať nezabloudíš</p>
+      <h2 id="map-title">Kudy na Nivku?</h2>
+      <p>Z Vsetína zamiř do Semetína. Od bývalé Formanky vede k chatě přibližně 2 km dlouhá lesní cesta.</p>
+      <a class="map-button" href="https://www.google.com/maps/search/?api=1&amp;query=49.353071,17.939738" target="_blank" rel="noopener">Otevřít navigaci <span>↗</span></a>
+    </div>
+    <div class="drawn-map" role="img" aria-label="Kreslená mapa cesty ze Vsetína přes Semetín k Chatě Nivka">
+      <svg viewBox="0 0 760 520" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path class="terrain" d="M18 120C130 37 244 59 329 120S507 180 742 62V498H18Z" />
+        <path class="river" d="M740 468C635 425 624 354 537 338S390 347 326 289" />
+        <path class="main-road" d="M721 444C632 425 568 390 510 350C444 304 416 270 366 242" />
+        <path class="forest-road" d="M366 242C318 210 305 182 266 155C226 128 195 112 143 104" />
+        <g class="trees">
+          <path d="M87 326l26-48h-15l23-42 23 42h-15l26 48zM177 260l22-40h-13l20-37 20 37h-13l22 40zM282 372l25-46h-14l22-41 22 41h-14l25 46zM455 155l24-44h-14l21-39 21 39h-14l24 44zM594 225l23-42h-13l20-38 20 38h-13l23 42z" />
+        </g>
+        <g class="houses">
+          <path d="M617 403v-35l34-26 34 26v35zM646 403v-25h13v25z" />
+          <path d="M334 270v-26l27-21 27 21v26z" />
+        </g>
+        <g class="chalet">
+          <path d="M87 123V79l47-35 47 35v44z" />
+          <path d="M74 82l60-45 60 45M107 123V91h23v32M145 123V91h17v32" />
+          <path d="M151 55v-25h13v35" />
+        </g>
+        <circle class="pin" cx="134" cy="97" r="11" />
+        <circle class="dot" cx="361" cy="242" r="8" />
+        <circle class="dot" cx="651" cy="382" r="8" />
+        <text class="label big" x="70" y="160">CHATA NIVKA</text>
+        <text class="label" x="315" y="303">SEMETÍN</text>
+        <text class="note-label" x="279" y="326">bývalá Formanka</text>
+        <text class="label" x="605" y="438">VSETÍN</text>
+        <text class="road-label" x="168" y="180" transform="rotate(26 168 180)">lesní cesta · cca 2 km</text>
+        <g class="north"><path d="M699 94v-53M699 41l-12 20M699 41l12 20"/><text x="691" y="28">S</text></g>
+      </svg>
+    </div>
+  </section>
 </body>
 </html>
