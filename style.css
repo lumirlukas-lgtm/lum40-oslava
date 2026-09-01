@@ -89,7 +89,7 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
 .detail-card h3 { margin:14px 0 11px; font-size:1.16rem; text-transform:uppercase; }
 .detail-card p { margin:0; color:#414642; font-size:.86rem; font-weight:600; line-height:1.55; }
 .details-section>.bring-note { width:min(720px,100%); margin:35px 0 0; padding:15px 17px; background:var(--yellow); box-shadow:5px 5px 0 var(--ink); font-size:.88rem; }
-.attendance-section { display:grid; grid-template-columns:minmax(300px,1fr) minmax(280px,430px); gap:clamp(38px,8vw,120px); align-items:center; padding:clamp(58px,8vw,110px); background:#f4c7ca; color:var(--ink); border-top:4px solid var(--ink); }
+.attendance-section { display:grid; grid-template-columns:minmax(300px,1fr) minmax(280px,430px); gap:clamp(38px,8vw,120px); align-items:center; padding:clamp(58px,8vw,110px); background:#cddfeb; color:var(--ink); border-top:4px solid var(--ink); }
 .attendance-copy { max-width:720px; }
 .attendance-copy h2 { margin:0 0 20px; font-size:clamp(3rem,7vw,7rem); line-height:.86; letter-spacing:-.065em; text-transform:uppercase; }
 .attendance-lead { max-width:650px; margin:0 0 30px; font-size:clamp(1rem,2vw,1.25rem); font-weight:700; line-height:1.55; }
