@@ -43,7 +43,7 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
 .plan-day p { margin:3px 0 0; color:#414642; font-size:.78rem; font-weight:600; line-height:1.42; }
 .bring-note { margin:13px 0 0; padding:11px 12px; border:2px solid var(--ink); background:#dce9cf; font-size:.76rem; font-weight:700; line-height:1.45; transform:rotate(-.5deg); }
 .coming { grid-column:1; justify-self:start; align-self:end; margin:0; padding:8px 12px; border:2px solid var(--ink); background:var(--paper); color:var(--ink); font-size:.8rem; font-weight:700; letter-spacing:.04em; box-shadow:3px 3px 0 var(--ink); transform:rotate(-1deg); }
-#uvod,#informace,#mapa { scroll-margin-top:105px; }
+#uvod,#informace,#podrobnosti,#mapa { scroll-margin-top:105px; }
 @media (max-width:760px) {
   .hero { display:flex; flex-direction:column; min-height:100svh; padding:22px; background-position:61% center; }
   .topbar { top:10px; left:10px; right:10px; gap:8px; padding:7px 8px; box-shadow:4px 4px 0 var(--ink); }
@@ -67,6 +67,19 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
   @keyframes arrive { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:translateY(0); } }
 }
 .map-section { display:grid; grid-template-columns:minmax(260px,.7fr) minmax(460px,1.3fr); gap:clamp(32px,6vw,90px); align-items:center; padding:clamp(58px,8vw,110px); background:#f6efd9; color:var(--ink); border-top:4px solid var(--ink); }
+.details-section { padding:clamp(58px,8vw,110px); background:#dce9cf; color:var(--ink); border-top:4px solid var(--ink); }
+.details-heading { max-width:760px; margin-bottom:42px; }
+.details-heading h2 { margin:0 0 16px; font-size:clamp(2.5rem,5vw,5rem); line-height:.92; letter-spacing:-.055em; text-transform:uppercase; }
+.details-heading>p:last-child { margin:0; max-width:630px; font-size:1rem; font-weight:600; line-height:1.6; }
+.weekend-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
+.detail-card { position:relative; min-height:250px; padding:29px 22px 22px; background:#fffdf6; border:3px solid var(--ink); box-shadow:7px 7px 0 var(--ink); }
+.detail-card:nth-child(odd) { transform:rotate(-.7deg); }
+.detail-card:nth-child(even) { transform:rotate(.7deg); }
+.detail-card>b { position:absolute; top:-20px; right:16px; display:grid; width:48px; height:48px; place-items:center; border:3px solid var(--ink); border-radius:50%; background:var(--yellow); box-shadow:3px 3px 0 var(--ink); font-size:.85rem; }
+.detail-card small { display:block; color:#616862; font-size:.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
+.detail-card h3 { margin:14px 0 11px; font-size:1.16rem; text-transform:uppercase; }
+.detail-card p { margin:0; color:#414642; font-size:.86rem; font-weight:600; line-height:1.55; }
+.details-section>.bring-note { width:min(720px,100%); margin:35px 0 0; padding:15px 17px; background:var(--yellow); box-shadow:5px 5px 0 var(--ink); font-size:.88rem; }
 .map-copy { max-width:470px; }
 .map-kicker { display:inline-block; margin:0 0 15px; padding:7px 11px; border:2px solid var(--ink); background:var(--yellow); box-shadow:3px 3px 0 var(--ink); font-size:.72rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; transform:rotate(-1deg); }
 .map-copy h2 { margin:0 0 20px; font-size:clamp(2.5rem,5vw,5rem); line-height:.92; letter-spacing:-.055em; text-transform:uppercase; }
@@ -90,4 +103,6 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
 .note-label,.road-label { font-family:"Montserrat",sans-serif; font-size:14px; font-weight:700; fill:#4c524e; }
 .north { fill:none; stroke:#202220; stroke-width:4; stroke-linecap:round; }
 .north text { fill:#202220; stroke:none; font:800 20px "Montserrat",sans-serif; }
-@media (max-width:850px) { .map-section { grid-template-columns:1fr; padding:54px 22px 66px; } .drawn-map { padding:9px; box-shadow:7px 7px 0 var(--ink); } }
+@media (max-width:1000px) { .weekend-grid { grid-template-columns:repeat(2,1fr); gap:28px 18px; } }
+@media (max-width:850px) { .map-section { grid-template-columns:1fr; padding:54px 22px 66px; } .details-section { padding:54px 22px 66px; } .drawn-map { padding:9px; box-shadow:7px 7px 0 var(--ink); } }
+@media (max-width:560px) { .weekend-grid { grid-template-columns:1fr; } .detail-card { min-height:0; } }
