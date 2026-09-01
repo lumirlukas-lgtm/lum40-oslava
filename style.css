@@ -30,7 +30,7 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
 .info strong { font-size:1.05rem; font-weight:700; }
 .info span { margin-top:4px; color:#5d675f; font-size:.85rem; }
 .contribution { display:flex; align-items:center; gap:18px; background:var(--yellow); }
-.qr-placeholder { position:relative; flex:0 0 76px; height:76px; display:grid; place-items:center; border:2px solid #2f3431; background:#fff; color:#2f3431; font-size:.72rem; font-weight:800; letter-spacing:.08em; }
+.qr-placeholder { position:relative; flex:0 0 76px; height:76px; display:grid; place-items:center; border:2px solid #2f3431; background-color:#fff; background-position:center; background-repeat:no-repeat; background-size:cover; color:#2f3431; font-size:.72rem; font-weight:800; letter-spacing:.08em; }
 .qr-placeholder i { position:absolute; width:15px; height:15px; border:4px solid #2f3431; }
 .qr-placeholder i:nth-child(1) { top:6px; left:6px; }
 .qr-placeholder i:nth-child(2) { top:6px; right:6px; }
@@ -100,7 +100,7 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
 .attendance-note { display:inline-block; margin:28px 0 0; padding:12px 14px; border:2px solid var(--ink); background:#fffdf6; box-shadow:4px 4px 0 var(--ink); font-size:.8rem; font-weight:700; transform:rotate(-.5deg); }
 .payment-card { padding:28px; text-align:center; background:#fffdf6; border:3px solid var(--ink); box-shadow:10px 10px 0 var(--ink); transform:rotate(1deg); }
 .payment-card>p { display:inline-block; margin:0 0 22px; padding:7px 10px; background:var(--yellow); border:2px solid var(--ink); font-size:.68rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
-.qr-large { position:relative; width:min(230px,70vw); aspect-ratio:1; margin:0 auto 24px; display:grid; place-items:center; border:4px solid var(--ink); background:#fff; }
+.qr-large { position:relative; width:min(280px,76vw); aspect-ratio:1; margin:0 auto 24px; display:grid; place-items:center; border:4px solid var(--ink); background-color:#fff; background-position:center; background-repeat:no-repeat; background-size:cover; }
 .qr-large i { position:absolute; width:48px; height:48px; border:11px solid var(--ink); }
 .qr-large i:nth-child(1) { top:14px; left:14px; }
 .qr-large i:nth-child(2) { top:14px; right:14px; }
