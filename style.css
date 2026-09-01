@@ -72,11 +72,8 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
 .details-heading h2 { margin:0 0 16px; font-size:clamp(2.5rem,5vw,5rem); line-height:.92; letter-spacing:-.055em; text-transform:uppercase; }
 .details-heading>p:last-child { margin:0; max-width:630px; font-size:1rem; font-weight:600; line-height:1.6; }
 .weekend-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
-.detail-card { position:relative; min-height:250px; padding:29px 22px 22px; background:#fffdf6; border:3px solid var(--ink); box-shadow:7px 7px 0 var(--ink); cursor:default; transition:transform var(--motion) var(--ease-comic),box-shadow var(--motion) var(--ease-comic); will-change:transform; }
-.detail-card:nth-child(odd) { transform:rotate(-.7deg); }
-.detail-card:nth-child(even) { transform:rotate(.7deg); }
-.detail-card:nth-child(odd):hover { transform:translateY(-6px) rotate(-1.35deg); box-shadow:10px 11px 0 var(--ink); }
-.detail-card:nth-child(even):hover { transform:translateY(-6px) rotate(1.35deg); box-shadow:10px 11px 0 var(--ink); }
+.detail-card { position:relative; top:0; min-height:250px; padding:29px 22px 22px; background:#fffdf6; border:3px solid var(--ink); box-shadow:7px 7px 0 var(--ink); cursor:default; transition:top var(--motion) var(--ease-comic),box-shadow var(--motion) var(--ease-comic); }
+.detail-card:hover { top:-6px; box-shadow:10px 11px 0 var(--ink); }
 .detail-card>b { position:absolute; top:-20px; right:16px; display:grid; width:48px; height:48px; place-items:center; border:3px solid var(--ink); border-radius:50%; background:var(--yellow); box-shadow:3px 3px 0 var(--ink); font-size:.85rem; transition:transform var(--motion) var(--ease-comic); }
 .detail-card:hover>b { transform:rotate(6deg) scale(1.05); }
 .detail-card small { display:block; color:#616862; font-size:.68rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase; }
@@ -104,6 +101,9 @@ h1 em { display:inline-block; color:var(--yellow); font-style:normal; font-weigh
 .payment-card>span { color:#626862; font-size:.8rem; font-weight:700; }
 .map-copy { max-width:470px; }
 .map-kicker { display:inline-block; margin:0 0 15px; padding:7px 11px; border:2px solid var(--ink); background:var(--yellow); box-shadow:3px 3px 0 var(--ink); font-size:.72rem; font-weight:800; letter-spacing:.12em; text-transform:uppercase; transform:rotate(-1deg); }
+
+/* Menu zůstává pevné; nad něj smějí při posouvání vystoupit jen žluté štítky. */
+.eyebrow,.map-kicker,.detail-card>b { position:relative; z-index:60; }
 .map-copy h2 { margin:0 0 20px; font-size:clamp(2.5rem,5vw,5rem); line-height:.92; letter-spacing:-.055em; text-transform:uppercase; }
 .map-copy>p:not(.map-kicker) { margin:0 0 28px; font-size:1.02rem; font-weight:500; line-height:1.65; }
 .map-button { display:inline-block; padding:13px 17px; color:var(--ink); background:#fff; border:3px solid var(--ink); box-shadow:5px 5px 0 var(--ink); font-weight:800; text-decoration:none; text-transform:uppercase; transform:rotate(.5deg); }
