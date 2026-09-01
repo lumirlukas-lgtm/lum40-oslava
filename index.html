@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=informace-10" />
+  <link rel="stylesheet" href="style.css?v=podrobnosti-11" />
 </head>
 <body>
   <main class="hero">
@@ -20,6 +20,7 @@
       <div class="nav-links">
         <a href="#uvod">Úvod</a>
         <a href="#informace">Informace</a>
+        <a href="#podrobnosti">Podrobnosti</a>
         <a href="#mapa">Mapa</a>
       </div>
       <a class="place-link" href="https://nivka.cz/" target="_blank" rel="noopener">Chata Nivka <span aria-hidden="true">↗</span></a>
@@ -37,17 +38,23 @@
         <div class="qr-placeholder" aria-label="Místo pro QR kód"><i></i><i></i><i></i><b>QR</b></div>
         <div><small>Ubytování</small><strong>Příspěvek na pobyt</strong><span>QR kód pro platbu doplním</span></div>
       </article>
-      <article class="weekend-plan">
-        <small>Jak bude víkend probíhat</small>
-        <div class="plan-day"><b>Čt</b><p>Příjezd k večeru. Večeři si každý zajistí sám. Kdo chce, může přijet až v pátek.</p></div>
-        <div class="plan-day"><b>Pá</b><p>Ráno švédský stůl, kolem 15. hodiny už by měl být hotový dančí guláš.</p></div>
-        <div class="plan-day"><b>So</b><p>Snídaně formou švédského stolu a potom procházka na oběd a pivo do restaurace Valášek a zpět.</p></div>
-        <div class="plan-day"><b>Ne</b><p>Snídani si tentokrát vyřeší každý sám a potom pomalu domů.</p></div>
-        <p class="bring-note">Jestli chcete, přivezte něco dobrého na společný stůl — sladké, slané, domácí… cokoliv máte rádi.</p>
-      </article>
     </section>
     <p class="coming">Podrobnosti postupně přibudou tady.</p>
   </main>
+  <section class="details-section" id="podrobnosti" aria-labelledby="details-title">
+    <header class="details-heading">
+      <p class="map-kicker">Plán víkendu</p>
+      <h2 id="details-title">Co nás čeká?</h2>
+      <p>Žádný pevný jízdní řád — jen abyste přibližně věděli, s čím počítat.</p>
+    </header>
+    <div class="weekend-grid">
+      <article class="detail-card"><b>Čt</b><small>28. ledna</small><h3>Příjezd</h3><p>Dorazíme k večeru. Večeři si každý zajistí sám. Kdo chce, může přijet klidně až v pátek.</p></article>
+      <article class="detail-card"><b>Pá</b><small>29. ledna</small><h3>Gulášový den</h3><p>Ráno švédský stůl a kolem 15. hodiny už by měl být hotový dančí guláš.</p></article>
+      <article class="detail-card"><b>So</b><small>30. ledna</small><h3>Výlet na pivo</h3><p>Po snídani vyrazíme pěšky na oběd a pivo do restaurace Valášek — a potom zase zpět.</p></article>
+      <article class="detail-card"><b>Ne</b><small>31. ledna</small><h3>Pomalu domů</h3><p>Nedělní snídani si každý vyřeší sám. Potom už jen sbalit věci a vyrazit domů.</p></article>
+    </div>
+    <p class="bring-note">Chcete-li, přivezte něco dobrého na společný stůl — sladké, slané, domácí… zkrátka cokoliv máte rádi.</p>
+  </section>
   <section class="map-section" id="mapa" aria-labelledby="map-title">
     <div class="map-copy">
       <p class="map-kicker">Ať nezabloudíš</p>
