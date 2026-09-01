@@ -1,4 +1,4 @@
-:root { --cream:#fffdf6; --paper:#fffdf6; --ink:#202220; --yellow:#f3c847; --red:#df645a; --line:#202220; --ease-comic:cubic-bezier(.65,0,.35,1); --motion:.85s; }
+:root { color-scheme:only light; --cream:#fffdf6; --paper:#fffdf6; --ink:#202220; --yellow:#f3c847; --red:#df645a; --line:#202220; --ease-comic:cubic-bezier(.65,0,.35,1); --motion:.85s; }
 * { box-sizing:border-box; }
 html { min-height:100%; scroll-behavior:smooth; }
 body { margin:0; min-height:100%; color:var(--ink); background:#e9e7e0; font-family:"Montserrat",ui-sans-serif,system-ui,sans-serif; }
