@@ -10,13 +10,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=mapa-8" />
+  <link rel="stylesheet" href="style.css?v=menu-9" />
 </head>
 <body>
   <main class="hero">
     <div class="shade" aria-hidden="true"></div>
     <nav class="topbar" aria-label="Hlavní navigace">
       <a class="mark" href="#uvod" aria-label="Lumír 40 – začátek stránky"><span>L</span><strong>40</strong></a>
+      <div class="nav-links">
+        <a href="#uvod">Úvod</a>
+        <a href="#informace">Informace</a>
+        <a href="#mapa">Mapa</a>
+      </div>
       <a class="place-link" href="https://nivka.cz/" target="_blank" rel="noopener">Chata Nivka <span aria-hidden="true">↗</span></a>
     </nav>
     <section class="intro" id="uvod">
@@ -24,7 +29,7 @@
       <h1>Lumír<br />oslaví <em>XL</em></h1>
       <p class="lead">Je to dobrá záminka vypadnout do lesa, sejít se s lidmi, které mám rád, a pořádně to oslavit.</p>
     </section>
-    <section class="info" aria-label="Informace o oslavě">
+    <section class="info" id="informace" aria-label="Informace o oslavě">
       <article><small>Kdy</small><strong>Čt 28. 1. 2027</strong><span>do Ne 31. 1. 2027</span></article>
       <article><small>Kde</small><strong>Chata Nivka</strong><span>u Semetína, Vsetín</span></article>
       <article><small>Jídlo a pití</small><strong>Uvařím dančí guláš</strong><span>snídaně budou formou švédských stolů<br /><b>Pivo a limo zajištěno</b></span></article>
@@ -35,7 +40,7 @@
     </section>
     <p class="coming">Podrobnosti postupně přibudou tady.</p>
   </main>
-  <section class="map-section" aria-labelledby="map-title">
+  <section class="map-section" id="mapa" aria-labelledby="map-title">
     <div class="map-copy">
       <p class="map-kicker">Ať nezabloudíš</p>
       <h2 id="map-title">Kudy na Nivku?</h2>
