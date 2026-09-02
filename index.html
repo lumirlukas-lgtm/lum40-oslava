@@ -23,8 +23,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=share-card-37" />
-  <link rel="stylesheet" href="qr-code.css?v=share-card-37" />
+  <link rel="stylesheet" href="style.css?v=qr-jump-38" />
+  <link rel="stylesheet" href="qr-code.css?v=qr-jump-38" />
 </head>
 <body>
   <nav class="topbar" aria-label="Hlavní navigace">
@@ -52,8 +52,10 @@
       <article><small>Kde</small><strong>Chata Nivka</strong><span>Ratiboř 91</span></article>
       <article><small>Jídlo a pití</small><strong>Uvařím kančí guláš</strong><span>v sobotu bude snídaňový bufet<br /><b>Pivo zajištěno</b></span></article>
       <article class="contribution">
-        <div class="qr-placeholder" role="img" aria-label="QR kód pro příspěvek na ubytování"></div>
-        <div><small>Místo dárku</small><strong>Příspěvek na ubytování</strong><span>Naskenuj QR kód pro platbu</span></div>
+        <a class="contribution-jump" href="#ucast">
+          <div><small>Místo dárku</small><strong>Příspěvek na ubytování</strong><span>Klikni pro velký QR kód</span></div>
+          <b aria-hidden="true">↓</b>
+        </a>
       </article>
     </section>
   </main>
